@@ -1,19 +1,59 @@
-/* Responsive Styling for Header */
+/* General Responsive Adjustments */
+@media (max-width: 1200px) {
+  #carousel-section {
+    height: 80vh;
+  }
+
+  #carousel-content h2 {
+    font-size: 2.5rem;
+  }
+
+  #carousel-content .btn-enroll {
+    font-size: 1rem;
+    padding: 8px 25px;
+  }
+
+  #fee-structure,
+  #contact-us {
+    padding: 40px 15px;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 992px) {
+  .weather-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #courses-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text,
+  .about-image {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    align-items: center;
-    padding: 15px;
+    text-align: center;
   }
 
   nav ul {
     flex-direction: column;
-    margin-top: 15px;
-    align-items: center;
+    margin-top: 20px;
   }
 
-  nav ul li {
-    margin: 10px 0;
+  #carousel-section {
+    height: 70vh;
   }
 
   #carousel-content h2 {
@@ -21,90 +61,33 @@
   }
 
   #carousel-content .btn-enroll {
-    font-size: 1rem;
-    padding: 8px 20px;
+    font-size: 0.9rem;
   }
 
-  #about {
+  .footer-content {
     flex-direction: column;
-    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  header img {
+    height: 40px;
   }
 
-  .about-image {
-    margin-bottom: 20px;
-  }
-  
-  .about-text {
-    margin-bottom: 20px;
-  }
-
-  #courses-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  header h1 {
+    font-size: 1.2rem;
   }
 
   .course-box {
     padding: 15px;
   }
 
-  #weather-container {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  }
-}
-
-/* Responsive Footer */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
+  #contact-us,
+  #fee-structure {
+    padding: 20px;
   }
 
-  .social-icons {
-    margin-top: 20px;
-  }
-}
-/* Utility Width Classes */
-.full-width {
-  width: 100%;
-}
-
-.half-width {
-  width: 50%;
-}
-
-/* Responsive Grid for Courses Section */
-@media (max-width: 768px) {
-  #courses-container {
-    grid-template-columns: 1fr;
-  }
-
-  #carousel-section {
-    height: 60vh;
-  }
-
-  #carousel-content h2 {
-    font-size: 2rem;
-  }
-
-  #carousel-content .btn-enroll {
-    font-size: 1rem;
-    padding: 8px 20px;
-  }
-
-  footer {
-    padding: 10px;
-    font-size: 0.8rem;
-  }
-}
-
-/* About Section Improvements for Mobile */
-@media (max-width: 768px) {
-  #about {
-    flex-direction: column;
-  }
-
-  .about-text,
-  .about-image {
-    text-align: center;
-    margin-bottom: 20px;
+  #carousel-content {
+    padding: 15px;
   }
 }

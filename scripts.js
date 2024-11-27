@@ -1,5 +1,3 @@
-// Updated JavaScript for Royal College Website
-
 document.addEventListener('DOMContentLoaded', () => {
     // Carousel Section Image Background Change with Zoom Effect
     let currentIndex = 0;
@@ -25,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const imgElement = document.createElement('img');
             imgElement.src = images[currentIndex];
             imgElement.classList.add('carousel-image');
-            imgElement.style.zIndex = '1'; // Ensure image is behind other elements
+            imgElement.style.zIndex = '1'; 
             carouselSection.appendChild(imgElement);
 
             currentIndex = (currentIndex + 1) % images.length;
@@ -116,18 +114,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (document.body.classList.contains('dark-mode')) {
                 modal.style.backgroundColor = '#1f1f1f';
                 modal.style.color = '#ffffff';
-                modal.style.zIndex = '2'; // Ensure modals are above the carousel image
+                modal.style.zIndex = '2'; 
             } else {
                 modal.style.backgroundColor = '#ffffff';
                 modal.style.color = '#000000';
                 modal.style.zIndex = '2';
             }
         });
-
-        // Ensure the motto and enroll button are visible above the carousel
         const carouselContent = document.getElementById('carousel-content');
         if (carouselContent) {
-            carouselContent.style.zIndex = '3'; // Higher than carousel images
+            carouselContent.style.zIndex = '3'; 
         }
     });
 

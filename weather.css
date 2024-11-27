@@ -4,71 +4,6 @@
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     padding: 40px 20px;
-  }
-  
-  .weather-box {
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-  }
-  
-  .weather-box:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    z-index: 2;
-  }
-  
-  .weather-icon {
-    font-size: 3rem;
-    color: #004aad;
-    margin-bottom: 10px;
-  }
-  
-  .weather-info {
-    font-size: 1rem;
-    color: #333;
-  }
-  
-  .weather-box.sunny {
-    background: #ffe680;
-  }
-  
-  .weather-box.cloudy {
-    background: #d0e0f0;
-  }
-  
-  .weather-box.rainy {
-    background: #b3c7e6;
-  }
-  
-  .weather-box.windy {
-    background: #cce6ff;
-  }
-  
-  /* Dark Mode for Weather */
-  body.dark-mode #weather-container .weather-box {
-    background: #2c2c2c;
-    color: #ffffff;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-  }
-  
-  body.dark-mode .weather-icon {
-    color: #ffa500;
-  }
-  
-  body.dark-mode .weather-info {
-    color: #ffffff;
-  }
-  /* Weather Containers Styling */
-#weather-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    padding: 40px 20px;
     max-width: 1000px;
     margin: 0 auto;
   }
@@ -89,7 +24,7 @@
   }
   
   .weather-icon {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 10px;
     color: var(--primary-bg-color);
   }
@@ -102,4 +37,34 @@
   body.dark-mode .weather-icon {
     color: var(--highlight-color);
   }
-  
+
+.weather-box.sunny {
+    background: #ffe680;
+}
+
+.weather-box.cloudy {
+    background: #d0e0f0;
+}
+
+.weather-box.rainy {
+    background: #b3c7e6;
+}
+
+.weather-box.windy {
+    background: #cce6ff;
+}
+
+/* Dark Mode for Weather */
+body.dark-mode #weather-container .weather-box {
+    background: #2c2c2c;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .weather-icon {
+    color: #ffa500;
+}
+
+body.dark-mode .weather-info {
+    color: #ffffff;
+}
