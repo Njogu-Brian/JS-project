@@ -1,0 +1,74 @@
+{
+    "courses": [
+        {
+            "id": 1,
+            "name": "Computer Science",
+            "description": "Learn about algorithms, data structures, and software development.",
+            "duration": "8 semesters",
+            "modules": [
+                "Introduction to Programming",
+                "Data Structures",
+                "Algorithms",
+                "Operating Systems",
+                "Database Systems",
+                "Software Engineering"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Business Administration",
+            "description": "Gain skills in management, marketing, and business strategy.",
+            "duration": "6 semesters",
+            "modules": [
+                "Principles of Management",
+                "Marketing",
+                "Business Finance",
+                "Human Resource Management",
+                "Strategic Management",
+                "Business Law"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Graphic Design",
+            "description": "Develop your creative skills in visual communication.",
+            "duration": "6 semesters",
+            "modules": [
+                "Fundamentals of Design",
+                "Typography",
+                "Digital Media",
+                "Brand Identity",
+                "Web Design",
+                "Advertising Design"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Biology",
+            "description": "Explore the living world, from cells to ecosystems.",
+            "duration": "8 semesters",
+            "modules": [
+                "Cell Biology",
+                "Genetics",
+                "Microbiology",
+                "Human Anatomy",
+                "Ecology",
+                "Evolution"
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Psychology",
+            "description": "Understand human behavior and mental processes.",
+            "duration": "6 semesters",
+            "modules": [
+                "Introduction to Psychology",
+                "Developmental Psychology",
+                "Cognitive Psychology",
+                "Abnormal Psychology",
+                "Social Psychology",
+                "Research Methods"
+            ]
+        }
+    ]
+}

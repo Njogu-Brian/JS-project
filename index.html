@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal College</title>
+    <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="weather.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+            <img src="assets/lion head.webp" alt="Site Logo" id="site-logo">
+            <h1>Royal College</h1>
+        </div>
+        <nav>
+            <ul class="nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#about">About Us</a>
+                        <a class="dropdown-item" href="#courses-section" id="courses-link">Courses Available</a>
+                        <a class="dropdown-item" href="#contact-us">Contact Us</a>
+                        <a class="dropdown-item" href="#fee-structure">Fee Structure</a>
+                        <a class="dropdown-item" href="#fee-structure">Financial Aid</a>
+                        <a class="dropdown-item" href="#reviews">Reviews</a>
+                    </div>
+                </li>
+                <li class="nav-item ml-3">
+                    <button id="toggle-mode" class="btn btn-light">
+                        <i class="fas fa-lightbulb"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="carousel-section">
+        <div id="carousel-content">
+            <h2>Shaping Bright Futures</h2>
+            <button class="btn btn-primary btn-enroll">Enroll Now</button>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>Welcome to Royal College, a place of excellence in education and holistic development. Our college offers a range of courses designed to transform aspiring students into leaders of tomorrow.</p>
+                <p>Founded in 2024, our mission is to provide quality education, foster innovation, and create opportunities for personal and academic growth. With experienced faculty, state-of-the-art facilities, and a vibrant community, we empower students to achieve their goals.</p>
+                <p>Whether you're looking to pursue a degree or upgrade your skills, our diverse programs cater to all ambitions. Join us in shaping the future!</p>
+                <p>At Royal College, students are encouraged to explore their interests, participate in extracurricular activities, and grow both academically and personally. Our campus boasts advanced technology and collaborative spaces to support creativity and innovation.</p>
+                <p>We believe in fostering a diverse and inclusive environment where everyone is given the opportunity to thrive. Our alumni are testaments to the success that a supportive and forward-thinking educational institution can bring. Start your journey with us today!</p>
+                <button class="btn btn-primary" href="#contact-us">Contact Us</button>
+            </div>
+            <div class="about-image">
+                <img src="assets/college_about_image.webp" alt="Royal College Campus">
+            </div>
+        </div>
+    </section>
+
+    <section id="courses-section">
+        <h2>Available Courses</h2>
+        <div id="courses-container"></div>
+    </section>
+
+    <div class="modal" id="course-modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2 id="course-title">Course Title</h2>
+            <p id="course-description">Course Description</p>
+            <p id="course-duration">Duration: XX weeks</p>
+            <h4>Modules</h4>
+            <ul id="course-modules"></ul>
+        </div>
+    </div>
+
+    <div class="modal" id="enrollment-modal">
+        <div class="modal-content">
+            <span class="close" id="close-enrollment-modal">&times;</span>
+            <h2>Enrollment Form</h2>
+            <form id="enrollment-form">
+                <div class="form-group">
+                    <label for="enrollment-name">Name:</label>
+                    <input type="text" id="enrollment-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="enrollment-email">Email:</label>
+                    <input type="email" id="enrollment-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="course">Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="" disabled selected>Select a course</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary bouncy">Enroll Now</button>
+            </form>
+        </div>
+    </div>
+
+    <section id="fee-structure">
+        <h2>Fee Structure & Scholarship</h2>
+        <p>Click below to download our fee structure.</p>
+        <a href="assets/fee-structure.pdf" download class="btn btn-info bouncy">Download Fee Structure (PDF)</a>
+        <h3>Financial Aid & Sponsorship</h3>
+        <p>If you need financial assistance, please apply using the form below. We offer a variety of scholarships and financial aid opportunities to support your education.</p>
+        <button id="apply-financial-aid" class="btn btn-warning bouncy">Apply for Financial Aid</button>
+    </section>
+
+    <div class="modal" id="financial-aid-modal">
+        <div class="modal-content">
+            <span class="close" id="close-financial-aid-modal">&times;</span>
+            <h2>Financial Aid Application</h2>
+            <form id="financial-aid-form">
+                <div class="form-group">
+                    <label for="financial-aid-name">Name:</label>
+                    <input type="text" id="financial-aid-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="financial-aid-email">Email:</label>
+                    <input type="email" id="financial-aid-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="financial-aid-reason">Reason for Financial Aid:</label>
+                    <textarea id="financial-aid-reason" name="reason" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success bouncy">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <section id="contact-us">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need more information, feel free to get in touch with us.</p>
+        <p><strong>Address:</strong> 123 Royal College Street, Education City, EC 45678</p>
+        <p><strong>Phone:</strong> +1 234 567 890</p>
+        <p><strong>Email:</strong> contact@royalcollege.edu</p>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="contact-name">Name:</label>
+                <input type="text" id="contact-name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="contact-email">Email:</label>
+                <input type="email" id="contact-email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary bouncy">Send Message</button>
+        </form>
+    </section>
+
+    <section id="reviews">
+        <h2>Reviews</h2>
+        <div class="review">
+            <blockquote>
+                <p>"Royal College has transformed my career. The faculty is supportive, and the facilities are top-notch."</p>
+                <footer>- John Doe, Computer Science Student</footer>
+            </blockquote>
+        </div>
+        <div class="review">
+            <blockquote>
+                <p>"The community here is amazing. I’ve grown academically and personally thanks to the opportunities provided."</p>
+                <footer>- Jane Smith, Business Administration Student</footer>
+            </blockquote>
+        </div>
+        <div class="review">
+            <blockquote>
+                <p>"I’m grateful for the financial aid I received, allowing me to focus on my studies without stress."</p>
+                <footer>- Alex Johnson, Scholarship Recipient</footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="weather-section">
+        <h2>Current Weather at Royal College</h2>
+        <div id="weather-container">
+            <!-- Weather information containers will be dynamically added here -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>Connect with us on social media:</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p><strong>Address:</strong> 123 Royal College Street, Education City, EC 45678</p>
+            <p><strong>Phone:</strong> +1 234 567 890</p>
+            <p><strong>Email:</strong> contact@royalcollege.edu</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- FontAwesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>
